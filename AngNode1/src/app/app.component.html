@@ -1,0 +1,89 @@
+<mat-toolbar color="primary">
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button
+    class="mx-4"
+    mat-raised-button
+    (click)="openDialogStud()"
+    color="accent"
+  >
+    Add Student
+  </button>
+  <button mat-raised-button (click)="openDialog()" color="warn">
+    Add Item
+  </button>
+</mat-toolbar>
+
+<div class="container mt-2">
+  <table class="table table-stripped p-2">
+    <thead class="tb">
+      <th class="p-3">Item Name</th>
+      <th class="p-3">Item Desctiption</th>
+      <th class="p-3">Actions</th>
+    </thead>
+    <tbody *ngFor="let row of item1">
+      <tr>
+        <td>{{ row.name }}</td>
+        <td>{{ row.description }}</td>
+        <td>
+          <button
+            class="btn btn-success mx-2"
+            (click)="editItem1(row)"
+            type="button"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            (click)="deleteItem1(row._id)"
+            class="btn btn-danger"
+          >
+            <i class="bi bi-trash3-fill"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<h1>Students</h1>
+
+<div class="container mt-2">
+  <table class="table table-stripped p-2">
+    <thead class="tb">
+      <th class="p-3">Roll Number</th>
+      <th class="p-3">Name</th>
+      <th class="p-3">Email</th>
+      <th class="p-3">City</th>
+      <th class="p-3">Skills</th>
+      <th class="p-3">Department</th>
+      <th class="p-3">Actions</th>
+    </thead>
+    <tbody *ngFor="let s of stud1">
+      <tr>
+        <td>{{ s.roll }}</td>
+        <td>{{ s.name }}</td>
+        <td>{{ s.email }}</td>
+        <td>{{ s.city }}</td>
+        <td>{{ s.skills }}</td>
+        <td>{{ s.department }}</td>
+        <td>
+          <button
+            class="btn btn-success mx-2"
+            (click)="editStud(s)"
+            type="button"
+          >
+            <i class="bi bi-pencil-square"></i>
+          </button>
+          <button
+            type="button"
+            (click)="deleteStud(s._id)"
+            class="btn btn-danger"
+          >
+            <i class="bi bi-trash3-fill"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

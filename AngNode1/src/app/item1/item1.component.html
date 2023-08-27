@@ -1,0 +1,55 @@
+<div mat-dialog-title class="bg-primary">
+  <h1 class="text-center">Items</h1>
+</div>
+<form [formGroup]="item1Form" (ngSubmit)="addItem1()">
+  <div mat-dialog-content>
+    <div class="container d-flex flex">
+      <div class="col-6 mx-2">
+        <mat-form-field appearance="outline">
+          <mat-label>Item Name</mat-label>
+          <input
+            type="text"
+            formControlName="name"
+            matInput
+            placeholder="Item"
+            required
+          />
+        </mat-form-field>
+      </div>
+      <div class="col-6">
+        <mat-form-field appearance="outline">
+          <mat-label>Item Description</mat-label>
+          <input
+            type="text"
+            formControlName="description"
+            matInput
+            placeholder="Item Description"
+            required
+          />
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <div mat-dialog-action>
+    <div class="container px-4 text-center">
+      <div class="row gx-5">
+        <div class="col mb-4">
+          <button type="submit" class="p-3" mat-raised-button color="primary">
+            {{ row ? "Update" : "Save" }}
+          </button>
+        </div>
+        <div class="col">
+          <button
+            type="button"
+            class="p-3"
+            [mat-dialog-close]="false"
+            mat-raised-button
+            color="warn"
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

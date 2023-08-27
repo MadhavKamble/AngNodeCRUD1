@@ -1,0 +1,19 @@
+
+
+
+
+for each:           for loop syntax
+let i of arr == for(int i=0;i<arr.length();i++)
+arr=[1,2,3,4,5]
+arr.lenght()=5
+
+
+interface Item1 {
+  name: String;
+}
+
+let row of item1 <==> for(int row=0;i<item1.length();row++)
+
+item1: Item1[] = [] 
+[ { name: Sam;},  {name: ram;},{name: sham;} ];
+row=0               row=1
