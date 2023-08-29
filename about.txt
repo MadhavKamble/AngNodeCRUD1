@@ -1,0 +1,1 @@
+this is a simple crud operation application made with angular , nodejs, mongodb, express
